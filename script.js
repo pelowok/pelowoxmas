@@ -1,3 +1,35 @@
+// Function to generate a set of random names
+function generateRandomNames() {
+  const adjectives = ['Happy', 'Funny', 'Brave', 'Clever', 'Gentle', 'Silly', 'Kind', 'Lively', 'Calm', 'Bright'];
+  const animals = ['Dog', 'Cat', 'Rabbit', 'Elephant', 'Lion', 'Tiger', 'Monkey', 'Horse', 'Dolphin', 'Penguin'];
+
+  const names = [];
+
+  for (const adjective of adjectives) {
+    for (const animal of animals) {
+      names.push(`${adjective} ${animal}`);
+    }
+  }
+
+  return names.sort(); // Sort the names alphabetically
+}
+
+// Function to check if the page exists
+async function checkPage(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    return response.ok;
+  } catch (error) {
+    return false;
+  }
+}
+
+// Function to play click sound
+function playClick() {
+  const clickSound = new Audio('click.mp3');
+  clickSound.play();
+}
+
 // Create links with pre-generated unique strings
 const gridContainer = document.getElementById('gridContainer');
 const names = generateRandomNames();
