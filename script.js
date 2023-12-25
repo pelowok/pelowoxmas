@@ -49,9 +49,6 @@ for (const name of names) {
     case 'Bright Horse':
       pageUrl = './brighthorse.html';
       break;
-    case 'Calm Rabbit':
-      pageUrl = './calmrabbit.html';
-      break;
     case 'Silly Penguin':
       pageUrl = './sillypenguin.html';
       break;
