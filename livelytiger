@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Cat</title>
+  <title>Lively Tiger</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -27,13 +27,13 @@
 </head>
 <body>
   <div class="banner">
-    <p>Merry Christmas, Slightly Too Long, Emotionally-demonstrative Chicken!</p>
+    <p>Merry Christmas, Guy who works hard on himself every day. We see you.</p>
 
-    <a href="https://www.nintendo.com/us/store/products/joy-con-r-neon-red/" target="_blank"> <br>
+    <a href="https://boardgamegeek.com/boardgame/159458/mice-and-mystics-downwood-tales" target="_blank"> <br>
       <span>
-       <img src="line.gif">
+       <img src="weird.gif">
        </span>
-       <br>We heard you like lining up and want to be able to practice at home so here are your Lining Up Lessons! SO COOL!</a>
+       <br>SIMON LUCAS YOU MAY HAVE ALREADY WON 10 GAJILLION DOLLARS!!1! SCRATCH HERE TO SEE YOUR WINNING NUMBERS!</a>
   </div>
   <br>
   <a href="index.html" class="link-back">Return to Index</a>
