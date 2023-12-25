@@ -12,6 +12,11 @@
 
     h1 {
       color: #FF0000;
+      font-size: 2.2rem; /* Increase text size */
+    }
+
+    p {
+      font-size: 2.2rem; /* Increase text size */
     }
 
     .message {
@@ -24,6 +29,7 @@
       background-color: #3498db;
       color: #fff;
       border-radius: 5px;
+      font-size: 2.2rem; /* Increase text size */
     }
   </style>
 </head>
@@ -32,6 +38,18 @@
     <h1>Your gift must be in a different castle...</h1>
     <p>Click below to return:</p>
   </div>
-  <a href="index.html" class="link-back">Go Back to the List</a>
+  <a href="index.html" class="link-back" onclick="playClick()">Go Back to Index</a>
+
+  <audio id="clickSound">
+    <source src="click.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function playClick() {
+      const clickSound = document.getElementById('clickSound');
+      clickSound.play();
+    }
+  </script>
 </body>
 </html>

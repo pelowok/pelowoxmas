@@ -4,12 +4,35 @@
   <meta charset="UTF-8">
   <title>Link Grid</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 2.2rem; /* Increase text size */
+    }
+  </style>
 </head>
 <body>
   <div class="grid-container" id="gridContainer">
     <!-- Links will be generated here -->
   </div>
 
+  <audio id="clickSound">
+    <source src="click.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <script src="script.js"></script>
+  <script>
+    function playClick() {
+      const clickSound = document.getElementById('clickSound');
+      clickSound.play();
+    }
+
+    const gridContainer = document.getElementById('gridContainer');
+    const links = gridContainer.getElementsByTagName('a');
+    for (const link of links) {
+      link.addEventListener('click', playClick);
+    }
+  </script>
 </body>
 </html>
