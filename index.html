@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid of Links</title>
+  <style>
+    /* Adjust styling for the grid */
+    body {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      gap: 5px;
+      padding: 20px;
+    }
+    a {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #000;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Function to generate a random unique string
+    function generateUniqueString() {
+      const adjectives = ['big', 'small', 'happy', 'sad', 'funny', 'serious', 'fast', 'slow', 'loud', 'quiet'];
+      const animals = ['dog', 'cat', 'bird', 'elephant', 'lion', 'tiger', 'monkey', 'snake', 'rabbit', 'horse'];
+
+      const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+      const randomAnimal = animals[Math.floor(Math.random() * animals.length)];
+
+      return `${randomAdjective}-${randomAnimal}`;
+    }
+
+    // Creating 400 links
+    for (let i = 0; i < 400; i++) {
+      const link = document.createElement('a');
+      const uniqueString = generateUniqueString();
+      link.textContent = uniqueString;
+      link.href = `./${uniqueString}.html`;
+      document.body.appendChild(link);
+    }
+  </script>
+</body>
+</html>
