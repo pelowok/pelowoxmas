@@ -22,27 +22,21 @@
 </head>
 <body>
   <script>
-    // Function to shuffle an array
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
+    // Function to generate a random unique string
+    function generateUniqueString() {
+      const adjectives = ['big', 'small', 'happy', 'sad', 'funny', 'serious', 'fast', 'slow', 'loud', 'quiet', 'clever', 'clumsy', 'brave', 'shy', 'kind', 'mean', 'gentle', 'wild', 'calm', 'curious'];
+      const animals = ['dog', 'cat', 'bird', 'elephant', 'lion', 'tiger', 'monkey', 'snake', 'rabbit', 'horse', 'koala', 'penguin', 'giraffe', 'zebra', 'dolphin', 'octopus', 'panda', 'bear', 'fox', 'wolf'];
+
+      const randomAdjective = adjectives.splice(Math.floor(Math.random() * adjectives.length), 1)[0];
+      const randomAnimal = animals.splice(Math.floor(Math.random() * animals.length), 1)[0];
+
+      return `${randomAdjective}-${randomAnimal}`;
     }
-
-    // Array of adjectives and animals
-    const adjectives = ['brave', 'clever', 'elegant', 'fierce', 'graceful', 'happy', 'intelligent', 'jovial', 'kind', 'lovely', 'magnificent', 'noble', 'optimistic', 'playful', 'quiet', 'resilient', 'sincere', 'thoughtful', 'unique', 'vibrant', 'witty', 'zealous'];
-    const animals = ['dog', 'cat', 'bird', 'elephant', 'lion', 'tiger', 'monkey', 'snake', 'rabbit', 'horse', 'panda', 'giraffe', 'koala', 'bear', 'zebra', 'owl', 'kangaroo', 'dolphin', 'cheetah', 'penguin', 'wolf', 'fox'];
-
-    // Shuffle the arrays to ensure uniqueness
-    const shuffledAdjectives = shuffleArray(adjectives);
-    const shuffledAnimals = shuffleArray(animals);
 
     // Creating 400 links
     for (let i = 0; i < 400; i++) {
       const link = document.createElement('a');
-      const uniqueString = `${shuffledAdjectives[i]}-${shuffledAnimals[i]}`;
+      const uniqueString = generateUniqueString();
       link.textContent = uniqueString;
       link.href = `./${uniqueString}.html`;
       document.body.appendChild(link);
