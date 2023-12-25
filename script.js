@@ -24,6 +24,12 @@ async function checkPage(url) {
   }
 }
 
+// Function to play click sound
+function playClick() {
+  const clickSound = new Audio('click.mp3');
+  clickSound.play();
+}
+
 // Create links with pre-generated unique strings
 const gridContainer = document.getElementById('gridContainer');
 const names = generateRandomNames();
@@ -44,6 +50,8 @@ for (const name of names) {
       link.href = './tryagain.html'; // Redirect to tryagain.html if page not found
     }
   });
+
+  link.addEventListener('click', playClick); // Add click sound to links
 
   gridContainer.appendChild(gridItem);
 }
